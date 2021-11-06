@@ -22,7 +22,7 @@ onPasswordChange = (event) => {
 }
 
 onSubmitSignIn = () => {
-   fetch('http://pure-inlet-71391.herokuapp.com/register', {
+   fetch('http://face-validation.herokuapp.com/register', {
      method: 'post',
      headers: {'Content-Type': 'application/json'},
      body: JSON.stringify({

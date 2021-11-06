@@ -77,7 +77,7 @@ loadUser = (data) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
-  fetch('https://pure-inlet-71391.herokuapp.com/imageurl', {
+  fetch('https://face-validation.herokuapp.com/imageurl', {
      method: 'post',
      headers: {'Content-Type': 'application/json'},
      body: JSON.stringify({
@@ -87,7 +87,7 @@ onButtonSubmit = () => {
   .then(response => response.json())
   .then(response => {
     if (response) {
-      fetch('http://pure-inlet-71391.herokuapp.com/image', {
+      fetch('http://face-validation.herokuapp.com/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
